@@ -1,5 +1,11 @@
 # @shermant/i18n-translator
 
+## 1.3.5
+
+### Patch Changes
+
+- fix: use asyncUpdate method to await `needToCompleteSettings` process; chore: bump @shermant/logger version
+
 ## 1.3.4
 
 ### Patch Changes

@@ -144,11 +144,11 @@ ${Object.entries(this.mergedSettings).map(([key, value]) => `🔸 [[${key}]]  ${
         }
 
         if (this.needToCompleteSettings.length > 0) {
-            spinner
+            await spinner
                 .text('👋 please provide the following settings')
                 .detail(`🔸 missing settings: ${unsetSettings.length > 0 ? (`${unsetSettings.map(text => `[[${text}]]`).join(' ')}`) : 'none'}\n🔸 invalid settings: ${invalidSettings.length > 0 ? (`${invalidSettings.map(text => `[[${text}]]`).join(' ')}`) : 'none'}`)
                 .state('succeed')
-                .update()
+                .asyncUpdate()
 
             await this.completeSettingsState()
         } else {
